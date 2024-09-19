@@ -12,7 +12,7 @@ urlpatterns = [
         views.CategoryListView.as_view(),
         name="category_posts",
     ),
-    path("posts/<int:pk>/", views.PostDetailView.as_view(),
+    path("posts/<int:post_id>/", views.PostDetailView.as_view(),
          name="post_detail"),
     path("posts/<int:post_id>/edit/", views.PostUpdateView.as_view(),
          name="edit_post"),
@@ -22,7 +22,8 @@ urlpatterns = [
          name="profile"),
     path("profile_edit/", views.ProfiletUpdateView.as_view(),
          name="edit_profile"),
-    path("posts/<post_id>/comment/", views.add_comment, name="add_comment"),
+    path("posts/<post_id>/comment/", views.CommentCreateView.as_view(),
+         name="add_comment"),
     path(
         "posts/<post_id>/edit_comment/<int:comment_id>/",
         views.CommentUpdateView.as_view(),
