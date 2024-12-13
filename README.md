@@ -32,7 +32,7 @@
 1) Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone --single-branch --branch master https://github.com/Alizunova/django_sprint4.git
+git clone https://github.com/Alizunova/django_sprint4.git
 ```
 
 ```
